@@ -1,0 +1,6 @@
+server:
+  port: 8081  # <--- CHANGED PORT!
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/order_service
