@@ -10,8 +10,8 @@ resilience4j:
   circuitbreaker:
     instances:
       inventory: # <--- We name our circuit breaker "inventory"
-        registerHealthIndicator: true
-        slidingWindowType: COUNT_BASED
+        registerHealthIndicator: true  #Exposes circuit breaker status via Actuator. We can see: OPEN, CLOSED, HALF_OPEN
+        slidingWindowType: COUNT_BASED 
         slidingWindowSize: 5           # Check the last 5 calls
         failureRateThreshold: 50       # If 50% fail, stop calling Product Service
         waitDurationInOpenState: 5s    # Wait 5 seconds before trying again
