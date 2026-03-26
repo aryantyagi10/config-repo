@@ -12,7 +12,7 @@ spring:
     properties:
       security.protocol: SASL_SSL
       sasl.mechanism: PLAIN
-      sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username=CSHAAOIG4GN6NDTM password=cflt7Akde4BkIqnVU4K6bX3sz/cMIjNjpuPyIocL7Qy7NhUrfDeWBcf44TQurf/g;
+      sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="CSHAAOIG4GN6NDTM" password="cflt7Akde4BkIqnVU4K6bX3sz/cMIjNjpuPyIocL7Qy7NhUrfDeWBcf44TQurf/g";
 
 
 resilience4j:
