@@ -1,0 +1,21 @@
+server:
+  port: 8083
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  kafka:
+    bootstrap-servers: pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092
+    consumer:
+      group-id: notificationId
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*" # This allows it to read JSON from the order-service
+    properties:
+      security.protocol: SASL_SSL
+      sasl.mechanism: PLAIN
+      sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="CSHAAOIG4GN6NDTM" password="cflt7Akde4BkIqnVU4K6bX3sz/cMIjNjpuPyIocL7Qy7NhUrfDeWBcf44TQurf/g";
